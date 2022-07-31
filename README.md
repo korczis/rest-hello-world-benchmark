@@ -132,3 +132,81 @@ Percentage of the requests served within a certain time (ms)
   99%     76
  100%     78 (longest request)
 ```
+
+#### Note
+
+Percentiles are too volatile.
+
+##### Run #1
+
+```
+Percentage of the requests served within a certain time (ms)
+  50%      8
+  66%      8
+  75%      9
+  80%      9
+  90%      9
+  95%     10
+  98%     11
+  99%    137
+ 100%    139 (longest request)
+```
+
+##### Run #2
+
+```
+Percentage of the requests served within a certain time (ms)
+  50%      6
+  66%      6
+  75%      7
+  80%      7
+  90%      8
+  95%      9
+  98%     10
+  99%   7032
+ 100%  13745 (longest request)
+```
+
+##### Run #3
+
+```
+Percentage of the requests served within a certain time (ms)
+  50%      5
+  66%      5
+  75%      6
+  80%      6
+  90%      6
+  95%      7
+  98%      7
+  99%      9
+ 100%     19 (longest request)
+```
+
+##### Run #4
+
+```
+Percentage of the requests served within a certain time (ms)
+  50%      4
+  66%      5
+  75%      5
+  80%      5
+  90%      6
+  95%      7
+  98%      7
+  99%      8
+ 100%   6712 (longest request)
+```
+
+##### Run #5
+```
+Percentage of the requests served within a certain time (ms)
+  50%      5
+  66%      5
+  75%      6
+  80%      6
+  90%      6
+  95%      7
+  98%      7
+  99%      7
+ 100%      9 (longest request)
+```
