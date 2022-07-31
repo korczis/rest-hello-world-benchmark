@@ -37,25 +37,8 @@ MIX_ENV=prod iex -S mix phx.server
 
 #### Result
 
-```
+```text
 $ ab -c 100 -n 10000 http://127.0.0.1:4000/api/hello-world
-This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
-Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
-Licensed to The Apache Software Foundation, http://www.apache.org/
-
-Benchmarking 127.0.0.1 (be patient)
-Completed 1000 requests
-Completed 2000 requests
-Completed 3000 requests
-Completed 4000 requests
-Completed 5000 requests
-Completed 6000 requests
-Completed 7000 requests
-Completed 8000 requests
-Completed 9000 requests
-Completed 10000 requests
-Finished 10000 requests
-
 
 Server Software:        Cowboy
 Server Hostname:        127.0.0.1
@@ -92,4 +75,60 @@ Percentage of the requests served within a certain time (ms)
   98%     15
   99%     16
  100%     21 (longest request)
+```
+
+### Go - Fiber
+
+#### Build & Run
+
+```bash
+cd go-fiber
+
+# build
+make
+
+# run
+./bin/go-fiber
+```
+
+#### Result
+
+```text
+$ ab -c 100 -n 10000 http://127.0.0.1:4000/api/hello-world
+
+Server Software:
+Server Hostname:        127.0.0.1
+Server Port:            4000
+
+Document Path:          /api/hello-world
+Document Length:        26 bytes
+
+Concurrency Level:      100
+Time taken for tests:   26.133 seconds
+Complete requests:      10000
+Failed requests:        0
+Total transferred:      1620000 bytes
+HTML transferred:       260000 bytes
+Requests per second:    382.65 [#/sec] (mean)
+Time per request:       261.332 [ms] (mean)
+Time per request:       2.613 [ms] (mean, across all concurrent requests)
+Transfer rate:          60.54 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   40 504.7      2    6712
+Processing:     0    2   1.2      2       7
+Waiting:        0    1   1.2      2       7
+Total:          0   42 504.6      4    6712
+
+Percentage of the requests served within a certain time (ms)
+  50%      4
+  66%      5
+  75%      5
+  80%      5
+  90%      5
+  95%      6
+  98%      7
+  99%      7
+ 100%   6712 (longest request)
 ```
