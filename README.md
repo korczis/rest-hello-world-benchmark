@@ -104,31 +104,31 @@ Document Path:          /api/hello-world
 Document Length:        26 bytes
 
 Concurrency Level:      100
-Time taken for tests:   26.133 seconds
+Time taken for tests:   0.857 seconds
 Complete requests:      10000
 Failed requests:        0
 Total transferred:      1620000 bytes
 HTML transferred:       260000 bytes
-Requests per second:    382.65 [#/sec] (mean)
-Time per request:       261.332 [ms] (mean)
-Time per request:       2.613 [ms] (mean, across all concurrent requests)
-Transfer rate:          60.54 [Kbytes/sec] received
+Requests per second:    11669.05 [#/sec] (mean)
+Time per request:       8.570 [ms] (mean)
+Time per request:       0.086 [ms] (mean, across all concurrent requests)
+Transfer rate:          1846.08 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0   40 504.7      2    6712
-Processing:     0    2   1.2      2       7
-Waiting:        0    1   1.2      2       7
-Total:          0   42 504.6      4    6712
+Connect:        0    5   6.0      4      75
+Processing:     1    4   3.6      4      75
+Waiting:        0    4   3.4      4      75
+Total:          5    8   7.0      8      78
 
 Percentage of the requests served within a certain time (ms)
-  50%      4
-  66%      5
-  75%      5
-  80%      5
-  90%      5
-  95%      6
-  98%      7
-  99%      7
- 100%   6712 (longest request)
+  50%      8
+  66%      8
+  75%      8
+  80%      8
+  90%      9
+  95%     10
+  98%     10
+  99%     76
+ 100%     78 (longest request)
 ```
